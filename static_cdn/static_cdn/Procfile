@@ -1,0 +1,1 @@
+web: gunicorn GBPEC_PORTAL.wsgi --log-file -

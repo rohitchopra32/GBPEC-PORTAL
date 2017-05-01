@@ -1,0 +1,1166 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"create",
+				"create_post_slug"
+			],
+			[
+				"crea",
+				"createpostform"
+			],
+			[
+				"F",
+				"False"
+			],
+			[
+				"marked",
+				"markedcontent"
+			],
+			[
+				"content",
+				"content-markdown"
+			],
+			[
+				"unsub",
+				"unsubForum"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"foru",
+				"forum"
+			],
+			[
+				"str",
+				"strip"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"msl",
+				"mdl-card__supporting-text"
+			],
+			[
+				"mdl-car",
+				"mdl-card__title"
+			],
+			[
+				"mdl-ca",
+				"mdl-card"
+			],
+			[
+				"mdl-card",
+				"mdl-card__title"
+			],
+			[
+				"mdl-cell",
+				"mdl-cell--8-col"
+			],
+			[
+				"pos",
+				"POST"
+			],
+			[
+				"is",
+				"is_valid"
+			],
+			[
+				"choice",
+				"choice"
+			],
+			[
+				"Htp",
+				"HttpResponseRedirect"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"for",
+				"forum"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"For",
+				"Fourms"
+			],
+			[
+				"forum",
+				"forumView"
+			],
+			[
+				"sort",
+				"sort"
+			],
+			[
+				"all",
+				"all_category"
+			],
+			[
+				"post",
+				"post_upload_location"
+			],
+			[
+				"upload",
+				"upload_to"
+			],
+			[
+				"uploa",
+				"upload_to"
+			],
+			[
+				"Fourms",
+				"Forums"
+			],
+			[
+				"cate",
+				"categoryAdmin"
+			],
+			[
+				"Aut",
+				"AUTH_USER_MODEL"
+			],
+			[
+				"auto",
+				"auto_now"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"logout",
+				"logout_view"
+			],
+			[
+				"mdl-js",
+				"mdl-js-button"
+			],
+			[
+				"mdl-but",
+				"mdl-button--raised"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"Po",
+				"POST"
+			],
+			[
+				"te",
+				"textarea"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"content_",
+				"content_type"
+			],
+			[
+				"inline",
+				"inline-flex"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"obj",
+				"object"
+			],
+			[
+				"comment-re",
+				"comment-reply-btn"
+			],
+			[
+				"myf",
+				"myfunction"
+			],
+			[
+				"Comment",
+				"CommentModelAdmin"
+			],
+			[
+				"initial",
+				"initial_data"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"inl",
+				"inline-flex"
+			],
+			[
+				"mdl-cel",
+				"mdl-cell--6-col-phone"
+			],
+			[
+				"query",
+				"queryset"
+			],
+			[
+				"form",
+				"FormSet"
+			],
+			[
+				"File",
+				"files"
+			],
+			[
+				"Files",
+				"FILES"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"ge",
+				"get_full_name"
+			],
+			[
+				"w",
+				"widget"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"mdl-s",
+				"mdl-layout-spacer"
+			],
+			[
+				"p",
+				"p"
+			],
+			[
+				"mdl-",
+				"mdl-card--horizontal"
+			],
+			[
+				"mdl",
+				"mdl-shadow--6dp"
+			],
+			[
+				"mdl-ce",
+				"mdl-cell--3-col"
+			],
+			[
+				"object",
+				"object_list"
+			],
+			[
+				"pa",
+				"pagination"
+			],
+			[
+				"obje",
+				"object_list"
+			],
+			[
+				"class",
+				"classroom"
+			],
+			[
+				"usr",
+				"username"
+			],
+			[
+				"grou",
+				"group"
+			],
+			[
+				"h",
+				"HttpResponseRedirect"
+			],
+			[
+				"mdl-c",
+				"mdl-cell"
+			],
+			[
+				"mater",
+				"material-icons"
+			],
+			[
+				"show",
+				"showModal"
+			],
+			[
+				"bot",
+				"bottom-right"
+			],
+			[
+				"http",
+				"HttpResponseRedirect"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"boder",
+				"border-radius"
+			],
+			[
+				"ali",
+				"align-content"
+			],
+			[
+				"slug",
+				"slug"
+			],
+			[
+				"lis_",
+				"list_filter"
+			],
+			[
+				"list",
+				"list_display"
+			],
+			[
+				"fil",
+				"filename"
+			],
+			[
+				"img",
+				"img_id"
+			],
+			[
+				"pro",
+				"profile_pic"
+			],
+			[
+				"Ht",
+				"HttpResponseRedirect"
+			],
+			[
+				"get_",
+				"get_object_or_404"
+			],
+			[
+				"flex",
+				"inline-flex"
+			],
+			[
+				"teacher",
+				"teacher"
+			],
+			[
+				"u",
+				"user"
+			],
+			[
+				"dic",
+				"distinct"
+			],
+			[
+				"htt",
+				"HttpResponseRedirect"
+			],
+			[
+				"stue",
+				"students"
+			],
+			[
+				"try",
+				"try\tTry/Except"
+			],
+			[
+				"mdl-button-",
+				"mdl-button--colored"
+			],
+			[
+				"cls",
+				"classroom"
+			],
+			[
+				"group",
+				"group_id"
+			],
+			[
+				"gro",
+				"group"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"clas",
+				"classroom"
+			],
+			[
+				"ch",
+				"choices"
+			],
+			[
+				"A",
+				"AttributeError"
+			],
+			[
+				"c",
+				"cursor"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"mdl-navi",
+				"mdl-navigation__link"
+			],
+			[
+				"cl",
+				"color"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"i",
+				"i\tTag"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"auth",
+				"auth_view"
+			],
+			[
+				"lis",
+				"list-style"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"ima",
+				"background-image"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"fl",
+				"inline-flex"
+			],
+			[
+				"co",
+				"cover"
+			],
+			[
+				"backgro",
+				"background-image"
+			],
+			[
+				"pl",
+				"player2"
+			],
+			[
+				"pla",
+				"player2"
+			],
+			[
+				"o",
+				"o"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<form method=\"post\" enctype=\"multipart/form-data\">\n    {% csrf_token %}\n    <input type=\"file\" name=\"student\">\n    <button type=\"submit\">Upload</button>\n </form>\n",
+			"file": "templates/create_user.html",
+			"file_size": 306,
+			"file_write_time": 131381435838123500,
+			"settings":
+			{
+				"buffer_size": 162,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "comments/views.py",
+			"settings":
+			{
+				"buffer_size": 2994,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "posts/models.py",
+			"settings":
+			{
+				"buffer_size": 2295,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/comment_thread.html",
+			"settings":
+			{
+				"buffer_size": 11821,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/confirm_delete.html",
+			"settings":
+			{
+				"buffer_size": 619,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"last_filter": "Snippet: html",
+		"selected_items":
+		[
+			[
+				"Snippet: html",
+				"Snippet: html"
+			],
+			[
+				"",
+				"HTML: Encode Special Characters"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib2,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib;"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/GBPEC_PORTAL",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates"
+	],
+	"file_history":
+	[
+		"/C/Users/rohit/Downloads/Advancing-the-Blog-master/src/templates/confirm_delete.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/student_dashboard.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/search.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/profile.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/post_full.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/post_edit.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/post_detail.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/login.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/forum_view.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/forum_post_edit.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/forum_full.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/forum_edit.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/edit_profile.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/edit_post.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/comment_thread.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/classroom_detail.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/changepassword.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/GBPEC_PORTAL/settings/__init__.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/GBPEC_PORTAL/settings/local.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/GBPEC_PORTAL/settings/production.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/.gitignore",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/settings",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/base.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/fourms/forms.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/fourms/models.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/fourms/views.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/postman/view.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/GBPEC_PORTAL/urls.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/classroom/views.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/GBPEC_PORTAL/settings.py",
+		"/C/Users/rohit/Desktop/index.html",
+		"/C/Users/rohit/Downloads/pybbm-master/pybb/templates/pybb/forum_list.html",
+		"/C/Users/rohit/Downloads/pybbm-master/pybb/templates/pybb/forum.html",
+		"/C/Users/rohit/Downloads/pybbm-master/pybb/views.py",
+		"/C/Users/rohit/Downloads/pybbm-master/pybb/models.py",
+		"/C/Users/rohit/Downloads/pybbm-master/pybb/templates/pybb/index.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/fourms/admin.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/teacher/models.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/student/models.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/pybb/forum_list.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/pybb/category.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/pybb/urls.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/pybb/views.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/pybb/breadcrumb.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/pybb/forms.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/pybb/profiles.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/pybb/urls.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/forms.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/admin.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/models.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0017_auto_20170423_1532.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0016_auto_20170423_1428.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0015_auto_20170423_1420.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0014_auto_20170423_1414.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0013_auto_20170423_1413.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0012_post_deadline.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0011_auto_20170412_2148.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0010_auto_20170412_2141.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0009_auto_20161121_2158.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0008_auto_20161106_1101.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0007_file_timestamp.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0006_auto_20161106_0958.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0005_auto_20161025_1940.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0004_auto_20161018_1525.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0003_auto_20161017_2253.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0002_auto_20161017_2245.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/migrations/0001_initial.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/apps.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/posts/views.py",
+		"/C/Users/rohit/Desktop/Spirit-master/example/project/urls.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/spirit/urls.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/GBPEC_PORTAL/settings/spirit.py",
+		"/C/Users/rohit/Desktop/Spirit-master/example/spirit/settings.py",
+		"/C/Users/rohit/Desktop/Spirit-master/example/project/settings/base.py",
+		"/C/Users/rohit/Desktop/Spirit-master/example/project/settings/dev.py",
+		"/C/Users/rohit/Desktop/Spirit-master/example/project/settings/prod.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/postman/forms.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/postman/base_write.html",
+		"/C/Users/rohit/Desktop/Spirit-master/spirit/user/models.py",
+		"/C/Users/rohit/Desktop/Spirit-master/example/spirit/user/models.py",
+		"/C/Users/rohit/Desktop/Spirit-master/example/spirit/topic/models.py",
+		"/C/Python34/Lib/site-packages/djangobower/management/commands/bower_install.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/student/views.py",
+		"/C/Users/rohit/Downloads/Advancing-the-Blog-master/src/blog/urls.py",
+		"/C/Users/rohit/Downloads/Advancing-the-Blog-master/src/accounts/views.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/classroom/models.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/classroom/utils.py",
+		"/C/Users/rohit/Downloads/Advancing-the-Blog-master/src/comments/forms.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/postman/base_folder.html",
+		"/C/Users/rohit/Desktop/a (2).html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/postman/inc_subject_ex.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/mobileesp/mdetect.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/mobileesp/middleware.py",
+		"/C/Users/rohit/Desktop/project/Lib/site-packages/pagination/templatetags/pagination_tags.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/requirements.txt",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/classroom/templatetags/style.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/comments/views.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/comments/models.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/static/js/file.js",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/comments/admin.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/django_ajax/decorators.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/django_ajax/context_processors.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/student/forms.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/teacher/forms.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/classroom/template_tag.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/classroom/templatetags/__init__.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/static_cdn/static_cdn/static_cdn/static/css/material.css",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/student/urls.py",
+		"/D/ROHIT.CPP",
+		"/D/Hannibal Season 1 Complete 480p HDTV x264 [Multi-Sub] [DexzAery]/Hannibal S01E08-Fromage.srt",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/post.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/inc_subject_ex.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/base_write.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/trash.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/base_folder.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/base.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/view.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/sent.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/reply.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/write.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/Lib/site-packages/postman/templates/postman/inbox.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/classroom/forms.py",
+		"/C/Users/rohit/Desktop/ /mlm/website/Procfile",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/templates/classroom.html",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/teacher/admin.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/teacher/views.py",
+		"/C/Users/rohit/Desktop/GBPEC/portal/GBPEC_PORTAL/static/css/material.min.css",
+		"/E/Adobe After Effects CS6 11.0.0.378 LS7 Multilanguage [ChingLiu]/ChingLiu.Notes.nfo"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\rohit\\Desktop\\GBPEC\\portal\\GBPEC_PORTAL\\templates",
+			"C:\\Users\\rohit\\Desktop\\GBPEC\\portal\\GBPEC_PORTAL\\posts",
+			"C:\\Users\\rohit\\Desktop\\GBPEC\\portal\\GBPEC_PORTAL\\templates",
+			"C:\\Users\\rohit\\Desktop\\GBPEC-PORTAL\\portal\\GBPEC_PORTAL"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"></",
+			"<span class=\"mdl-layout-title\"><a href=\"/{{request.user.username}}/\"",
+			"<a class=\"mdl-navigation__link\" href=\"/messages/trash/\">Trash</a>",
+			"dialog",
+			"forums",
+			"object_list",
+			"forumfull",
+			"<br>",
+			"forum_view",
+			"forum_list",
+			"file",
+			"title",
+			"name",
+			"timestamp",
+			"file",
+			"forum",
+			"Post",
+			"classroom",
+			"user",
+			"Post",
+			"<li class=\"mdl-menu__item\"><a class=\"\" href=\"/\">sign out</a></li>",
+			">\n",
+			"id",
+			"content_type",
+			"mdl-data-table__cell--non-numeric",
+			"></",
+			"blockquote",
+			"blackquote",
+			"p",
+			"<img src=\"http://i.imgur.com/DY6gND0.png\" draggable=\"false\"/>",
+			"<img src=\"http://i.imgur.com/HYcn9xO.png\" draggable=\"false\"/>",
+			"<img src=\"http://i.imgur.com/DY6gND0.png\" draggable=\"false\"/>",
+			"True",
+			">\n",
+			"Profile",
+			"slug",
+			"users",
+			"contacts",
+			"')\n",
+			"right",
+			"post",
+			"s",
+			"span",
+			"p",
+			"h1",
+			"post",
+			"<br>",
+			"h2",
+			"div",
+			"search",
+			"query",
+			"edit_profile",
+			"post",
+			").",
+			"post",
+			"teacher",
+			"mdl-dialog",
+			"20",
+			"a",
+			"classroom_create",
+			"True",
+			"classroom_full",
+			"classroom_detail",
+			"loggedin",
+			"PostForm",
+			"]",
+			"\"]",
+			", \"branch\",\"batch\"",
+			"\"roll_no\"",
+			"student",
+			"core",
+			"settings",
+			"button",
+			">\n",
+			"full_name",
+			"filter",
+			"student",
+			"\"roll_no\", \"branch\",\"batch\"",
+			"\n]",
+			">\n",
+			"button",
+			"div",
+			"right",
+			"Title",
+			"link",
+			"Link",
+			"Enter Classroom    \t\t\t\t",
+			"update",
+			"      \t\t\t\t\tView Updates\n",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n    \t\t\tAenan convallis.",
+			"#3f51b5",
+			"#b3d4fc",
+			"h2",
+			"username",
+			"article",
+			"<a href=\"#\">abc</a>",
+			"<<a href=\"#\">abc</a>",
+			" \n",
+			"-;",
+			"instance",
+			"edit",
+			"student",
+			"studentDetails",
+			"render_to_response",
+			"django_test",
+			"post",
+			">\n",
+			"this.id",
+			"this",
+			"500px",
+			" <div class=\"container-fluid nb \" >\n<div class=\" navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n<div class=\"navbar-header\">\n<button class=\"navbar-toggle \" type=\"button\" data-toggle=\"collapse\" data-target=\"#my-target\" style=\"color:white; border:1px solid white;\">\n\t<span class=\"sr-only\" >Toggle navigation</span>\n\t<span class=\"glyphicon glyphicon-menu-hamburger\"></span>\n</button>\n\n\t<a href=\"home.html\" class=\"navbar-brand \"><img src=\"images/logo2.png\" style=\"display:inline;\">G.B Pant Engineering College</a>\n</div>\n<div class=\"collapse navbar-collapse\" id=\"my-target\">\n\t<ul class=\"nav navbar-nav navbar-right\">\n\t<li class=\"active\"><a href=\"home.html\">HOME<span style=\"padding-left:3px;\" class=\"glyphicon glyphicon-home\"></span></a></li>\n\t<li class=\"dropdown\">\n\t<a href=\"About_college.html\" id=\"toggle\" class=\"dropdown-toggle\" data-toggle=\"\">\n\t\tABOUT-US\t\n\t</a>\n\t\n\t<ul class=\"dropdown-menu\">\n\t\t<li><a href=\"About_college.html\">About college</a></li>\n\t\t<li><a href=\"principal.html\">From principal's Desk</a></li>\n\t\t<li><a href=\"admin_staff.html\">Admin Staff Information</a></li>\n\t\t<li><a href=\"mission.html\">Our mission And Vision</a></li>\n\t</ul>\n\t</li>\n\t<li class=\"dropdown\">\n\t<a href=\"department%20mae.html\" id=\"toggle\" class=\"dropdown-toggle\" data-toggle=\"\">Department</a>\n\t\t<ul class=\"dropdown-menu\">\n\t\t\t<li><a href=\"department cse.html\">Computer Science (CSE)</a></li>\n\t\t\t<li><a href=\"department%20ece.html\">Electronics & Communication (ECE)</a></li>\n\t\t\t<li><a href=\"department%20mae.html\">Mechanical & Automation</a></li>\n\t\t\t<li><a href=\"department%20has.html\">Humanities And Applied Sciences</a></li>\n\n\t\t</ul>\n\t</li>\n\t<li class=\"dropdown\">\n\t<a href=\"#\" id=\"toggle\" class=\"dropdown\" data-toggle=\"\">Academics</a>\n\t<ul class=\"dropdown-menu text-center\">\n\t\t<li><a href=\"academics.html\">Academic</a></li>\n\t\t<li><a href=\"academic calender.html\">Academic calander</a></li>\n\t\t<li><a href=\"academics admission.html\">Admission</a></li>\n\t\t<li><a href=\"#\">Examinations</a></li>\n\t\t<li><a href=\"#\">Results</a></li>\n\t\t<li><a href=\"#\">Student Activities</a></li>\n\t\t<li><a href=\"#\">technical Societies</a></li>\n\t</ul>\t\t\n\t</li>\n\t<li><a href=\"#\">Gallery</a></li>\n\t<li><a href=\"#\">Placement</a></li>\n\t<li class=\"dropdown\"><a id=\"toggle\" href=\"canteen.html\" class=\"dropdown-toggle\" data-toggle=\"\">Facilities</a>\n\t\n\t<ul class=\"dropdown-menu\">\t\n\t<li><a href=\"canteen.html\">Canteen</a></li>\n\t<li><a href=\"library.html\">Library</a></li>\n\t<li><a href=\"sports.html\">Sports</a></li>\n\t</ul>\n\t</li>\n\t<li class=\"dropdown\">\n\t\t<a href=\"MAE%20timetable.html\" id=\"toggle\" class=\"dropdown-toggle\" data-toggle=\"\">Time Table</a>\n\t\t<ul class=\"dropdown-menu\">\n\t\t\t<li><a href=\"CSE%20timetable.html\">CSE Time Table</a></li>\n\t\t\t<li><a href=\"ECE%20timetable.html\">ECE Time Table</a></li>\n\t\t\t<li><a href=\"MAE%20timetable.html\">MAE Time Table</a></li>\n\t\t\t<li><a href=\"HAS%20timetable.html\">HAS Time Table</a></li>\n\t\t</ul>\n\t</li>\n\n\t<li class=\"dropdown\">\n\t\t<a href=\"rti.html\" id=\"toggle\" class=\"dropdown-toggle\" data-toggle=\"\">RTI</a>\n\t\t<ul class=\"dropdown-menu\">\n\t\t\t<li><a href=\"rti.html\">RTI</a></li>\n\t\t\t<li><a href=\"list%20of%20particulars.html\">List of Particulars</a></li>\n\t\t</ul>\n\t</li>\n\t<li><a href=\"contact%20us.html\">Contact Us</a></li>\n\t</ul>\n</div>\n</div>\n</div>\n",
+			"></",
+			"bgcolor",
+			"<td colspan=\"2\">\n",
+			"<td colspan\n",
+			"<td colspan=\"2\">\n",
+			"<td colspan=2>\n",
+			">\n",
+			"<td>",
+			"VI",
+			"rowspan",
+			"CommentForm",
+			"     \n",
+			"color",
+			"a {",
+			">\n",
+			"navbar-nav",
+			"nav navbar-nav"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<span class=\"mdl-layout-title\" style=\"background-color:#3f51b5;\"><a href=\"/{{request.user.username}}/\"",
+			"<a class=\"mdl-navigation__link\" href=\"/messages/trash/\">Trash</a><a class=\"mdl-navigation__link\" href=\"/{{request.user.username}}/forum/\">Forums</a>",
+			"classPost",
+			"<li class=\"mdl-menu__item\"><a class=\"\" href=\"/logout/\">sign out</a></li>",
+			"Enter Classroom",
+			"Classroom",
+			"Enter Classroom",
+			"    \t\t\tClassroom Description or assignments notifications.\n",
+			"#34465d",
+			"studentDetails",
+			"student",
+			"this",
+			"this.id",
+			"<td align=\"center\" colspan=\"2\">",
+			"<td align=\"center\" colspan=2>",
+			"<td align=\"center\">",
+			"IV",
+			"postForm"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "templates/create_user.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "comments/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1060,
+								1060
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 152.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "posts/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1508,
+								1508
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 322.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "templates/comment_thread.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11821,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10298,
+								10298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5221.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "templates/confirm_delete.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 619,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								421,
+								421
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "portal.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 167.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,129 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="description" content="gbpec , portal, gbpecportal,gbpec portal,GBPEC, rohit,rohitchopra,rohitchopra32">
+  <meta name="keywords" content="gbpec portal ,gbpec , portal, gbpecportal,gbpec portal,GBPEC, rohit,rohitchopra,rohitchopra32">
+	<title>GBPEC</title>
+	<meta name="author" content="rohit chopra, http://www.gbpec.herokuapp.com, email: rohitchopra32@gmail.com"/>
+	<link rel="stylesheet" href="{% static 'css/material.min.css' %}">
+	<script src="{% static 'js/material.min.js' %}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+   
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86896824-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<style>
+  html, body{
+    font-family: 'Roboto', sans-serif;;
+  }
+.demo-card-wide.mdl-card {
+  padding: 3%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: ;
+  
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header" >
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title"><a href="/{{request.user.username}}/" style="color: #fff; text-decoration: none;">GBPEC Portal</a></span>
+
+    </div>
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">LOGIN</a>
+      
+    </div>
+  </header>
+  
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content mdl-grid" >
+   
+      <div class="mdl-cell mdl-cell--6-col" style="margin:0 auto;">
+      	<div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin:0 auto;">
+ 			    <div class="mdl-card__title">
+ 			      <img src="{% static 'img/user.png' %}" style="margin:0 auto;">
+  			 </div>
+  			 <div class="mdl-card__supporting-text" style="margin: 0 auto;">
+   			  	<h2 class="mdl-card__title-text">Welcome to GBPEC Portal</h2>
+  			 </div>
+ 			    <div class="mdl-card__actions mdl-card--border">
+          {% if form.non_field_errors %}
+          <ul class='form-errors'>
+          {% for error in form.non_field_errors %}
+              <li style="list-style-type: none; font-style: inherit;">{{ error }}</li>
+          {% endfor %}
+          </ul>
+          {% endif %}
+ 			      <form style="margin: 0 auto;" method="POST" action="">
+              {% csrf_token %}
+						  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+							 {{ form.username }}
+							 <label class="mdl-textfield__label">username</label>
+						  </div>
+						  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							 {{ form.password }}
+							 <label class="mdl-textfield__label">password</label>
+						  </div>
+
+						  <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Login</button>
+				  	</form>
+
+   				</div>
+
+ 			</div>
+ 			
+	 
+	
+    </section>
+  
+    
+  </main>
+  <footer class="mdl-mini-footer" style="padding-top:10px; padding-bottom:10px">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">GBPEC Portal</div>
+    <ul class="mdl-mini-footer__link-list">
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Privacy & Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+</div>
+<script type="text/javascript">
+  MaterialTextfield.prototype.checkValidity = function () {
+    if (this.input_.validity.valid) {
+        this.element_.classList.remove(this.CssClasses_.IS_INVALID);
+    } else {
+        if (this.element_.getElementsByTagName('input')[0].value.length > 0) {
+              this.element_.classList.add(this.CssClasses_.IS_INVALID);
+        }
+    }
+};
+</script>
+	
+	<script src="./material.min.js"></script>
+
+</body>
+</html>

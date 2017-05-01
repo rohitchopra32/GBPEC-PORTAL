@@ -1,0 +1,215 @@
+{% load staticfiles %}
+{% load postman_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/material.min.css' %}">
+  <script src="{% static 'js/material.min.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 100px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background-color:#2c3e50;
+}
+body {
+  display: flex;
+}
+
+.file_input_div {
+  margin-bottom: 20px;
+  width: 250px;
+  height: 40px;
+}
+
+.file_input {
+  float: left;
+}
+
+#file_input_text_div {
+  width: 200px;
+  margin-top: -8px;
+  margin-left: 5px;
+}
+
+.none {
+  display: none;
+}
+.mdl-button--file {
+  input {
+    cursor: pointer;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    z-index: 4;
+  }
+}
+
+.mdl-textfield--file {
+  .mdl-textfield__input {
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+  }
+  .mdl-button--file {
+    right: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="overflow:hidden;">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title"><a href="/{{request.user.username}}/" style="color: #fff; text-decoration: none;">GBPEC Portal</a></span>
+      
+      <div class="mdl-layout-spacer"></div>
+       <span class="mdl-layout-title">{{ class }}</span>
+      <div class="mdl-layout-spacer"></div>
+      
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <form action="" method="POST">
+        {%csrf_token%}
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="query"
+                 id="waterfall-exp">
+        </div>
+        </form>
+      </div>
+
+
+<a id="demo-menu-lower-right" class="mdl-button mdl-js-button" style="text-transform:none; color:white;">
+        {{ request.user.username }}<span><i class="material-icons">arrow_drop_down</i></span>
+</a>
+
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-right">
+  <li class="mdl-menu__item"><a class="" href="/{{ request.user.username }}/profile/">Profile</a></li>
+  <li class="mdl-menu__item"><a class="" href="/{{ request.user.username }}/edit_profile/">Edit Profile</a></li>
+  <li class="mdl-menu__item"><a class="" href="/">sign out</a></li>
+  
+</ul>
+    
+</div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title"><a href="/{{request.user.username}}/" style="color: #fff; text-decoration: none;">GBPEC Portal</a></span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/messages/write/">Compose</a>
+      
+      <a class="mdl-navigation__link" href="/messages/inbox/"><span class="mdl-badge"{% postman_unread as unread_count %}
+      {% if unread_count %} data-badge="{{ unread_count }}"{% endif %}>Inbox</span></a>
+      
+      <a class="mdl-navigation__link" href="/messages/sent/">Outbox</a>
+      <a class="mdl-navigation__link" href="/messages/trash/">Trash</a>
+      
+      
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--3-col"></div>
+        <div class="mdl-cell mdl-cell--6-col">
+        <div class="mdl-card mdl-shadow--6dp" style="width: 100%">
+            <div class="mdl-card__title"><h2 class="mdl-card__title-text">Edit Profile</h2></div>
+            <div class="mdl-card__media" style="background-color: #fff;" >
+                <img id="img_id" {%if form.instance.profile_pic %}src="{{ form.instance.profile_pic.url }}" style="display:block;max-width:100%;height:280px; margin: 0 auto; background-color: #fff;" {% else %} style="visibility: hidden;" {% endif%}   alt="your image" />
+            </div>
+            <div class="mdl-card__supporting-text">
+            
+                <form enctype="multipart/form-data" action="" method="POSt">
+                 {% csrf_token %}
+                <div class="file_input_div">
+                    <div class="file_input">
+                        <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+                            <i class="material-icons">file_upload</i>
+                            {{ form.profile_pic }}
+
+                        </label>
+                    </div>
+                    <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
+                        <input class="file_input_text mdl-textfield__input" type="text" disabled readonly id="file_input_text" />
+                        <label class="mdl-textfield__label" for="file_input_text"></label>
+                    </div>
+                </div>
+                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    {{ form.first_name }}
+
+                    <label class="mdl-textfield__label" for="sample3">First Name</label>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    {{ form.middle_name }}
+
+                    <label class="mdl-textfield__label" for="sample3">Middle Name</label>
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    {{ form.last_name }}
+
+                    <label class="mdl-textfield__label" for="sample3">Last Name</label>
+                  </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    {{ form.email }}
+                    <label class="mdl-textfield__label" for="sample3">Email</label>
+                  </div>
+                
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    {{ form.contact }}
+                    <label class="mdl-textfield__label" for="sample2">Contact</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    {{ form.address }}  
+                    <label class="mdl-textfield__label" for="sample5">Address</label>
+                  </div>
+                
+                <button type="submit" name="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">submit</button>
+
+                </form>
+            
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+
+                function upload_img(input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            $('#img_id').attr('src', e.target.result);
+                            $('#img_id').css('visibility','visible');
+                            $('#img_id').css('height','400px');
+                        }
+
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+
+        </script>
+        <!-- <script type="text/javascript">
+            document.getElementById("uploadBtn").onchange = function () {
+            document.getElementById("uploadFile").value = this.files[0].name;
+        };
+        </script> -->
+        </div>
+    </div>
+    </div>
+    </main>
+    </div>
+    </body>
+    </html>

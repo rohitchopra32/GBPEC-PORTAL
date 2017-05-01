@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+<head>
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/blog.css" rel="stylesheet">
+</head>
+<body>
+
+{% block content %}
+<div class="container">
+	<H2>Welcome {{ full_name }}. You are now logged in.</H2>
+
+	<P><a href="/student/accounts/logout">Logout</a> or <A HREF="/student/{{ full_name }}/profile/">edit your profile</A></P>
+	<div style="margin:0 auto;">
+	<a href="/{{ full_name }}/post/create">create post</a>
+	<a href="/{{ full_name}}/post">view all posts</a>
+	</div>
+{% endblock %}
+</div>
+</body>

@@ -1,0 +1,128 @@
+{% load staticfiles %}
+{% load postman_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/material.min.css' %}">
+  <script src="{% static 'js/material.min.js' %}"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<style>
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 100px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background-color:#2c3e50;
+}
+body {
+  display: flex;
+}
+
+.file_input_div {
+  margin: auto;
+  width: 250px;
+  height: 40px;
+}
+
+.file_input {
+  float: left;
+}
+
+#file_input_text_div {
+  width: 200px;
+  margin-top: -8px;
+  margin-left: 5px;
+}
+
+.none {
+  display: none;
+}
+.mdl-textfield__label
+{
+  color: rgba(0, 0, 0, 0.61);
+}
+
+</style>
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="overflow:hidden;">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title"><a href="/{{request.user.username}}/" style="color: #fff; text-decoration: none;">GBPEC Portal</a></span>
+      
+      <div class="mdl-layout-spacer"></div>
+       <span class="mdl-layout-title">{{ class }}</span>
+      <div class="mdl-layout-spacer"></div>
+      
+     	<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <form action="" method="POST">
+        {%csrf_token%}
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="query"
+                 id="waterfall-exp">
+        </div>
+        </form>
+      </div>
+
+     
+</button>
+<a id="demo-menu-lower-right" class="mdl-button mdl-js-button" style="text-transform:none; color:white;">
+        {{ request.user.username }}<span><i class="material-icons">arrow_drop_down</i></span>
+</a>
+
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-right">
+  <li class="mdl-menu__item"><a class="" href="/{{ request.user.username }}/profile/">Profile</a></li>
+  <li class="mdl-menu__item"><a class="" href="/{{ request.user.username }}/edit_profile/">Edit Profile</a></li>
+  <li class="mdl-menu__item"><a class="" href="/">sign out</a></li>
+  
+</ul>
+    
+</div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title"><a href="/{{request.user.username}}/" style="color: #fff; text-decoration: none;">GBPEC Portal</a></span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/messages/write/">Compose</a>
+      
+      <a class="mdl-navigation__link" href="/messages/inbox/"><span class="mdl-badge"{% postman_unread as unread_count %}
+      {% if unread_count %} data-badge="{{ unread_count }}"{% endif %}>Inbox</span></a>
+      
+      <a class="mdl-navigation__link" href="/messages/sent/">Outbox</a>
+      <a class="mdl-navigation__link" href="/messages/trash/">Trash</a>
+      
+      
+    </nav>
+  </div>
+
+  <main class="mdl-layout__content">
+    <div class="page-content">
+    	<div class="mdl-grid">
+	    	<div class="mdl-cell mdl-cell--8-col" style="margin:0 auto;">
+	    	{% block content %}
+
+
+			{% endblock %}
+
+			</div>
+			</div>
+			</div>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript">
+  $("window").ready(function() {
+  $(".is-invalid").removeClass("is-invalid");
+      });
+      </script>
+			</main>
+			</div>
+			</body>
+			</html>
+

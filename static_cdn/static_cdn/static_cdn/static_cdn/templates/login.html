@@ -1,0 +1,132 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+	<link rel="stylesheet" href="{% static 'css/material.min.css' %}">
+	<script src="{% static 'js/material.min.js' %}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<style>
+.demo-card-wide.mdl-card {
+  width: 400px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: ;
+  
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header" >
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">GBPEC Portal</span>
+
+    </div>
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">STUDENT</a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab">TEACHER</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">GBPEC Portal</span>
+    <nav class="mdl-navigation">
+	      <a class="mdl-navigation__link" href="">Link</a>
+	      <a class="mdl-navigation__link" href="">Link</a>
+	      <a class="mdl-navigation__link" href="">Link</a>
+	      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content mdl-grid" >
+      <div class="mdl-cell mdl-cell--4-col" style="margin:0 auto;">
+      	<div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin:0 auto;">
+ 			<div class="mdl-card__title">
+ 			<img src="user.png" style="margin:0 auto;">
+  			</div>
+  			<div class="mdl-card__supporting-text" style="padding-left:50px;">
+   				<h2 class="mdl-card__title-text">Welcome to GBPEC Portal</h2>
+  			</div>
+ 			 <div class="mdl-card__actions mdl-card--border">
+ 			 <form style="padding-left:50px;">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+							<input type="text" class="mdl-textfield__input" name="rollno" >
+							<label class="mdl-textfield__label">roll no</label>
+
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input type="password" class="mdl-textfield__input" name="password">
+							<label class="mdl-textfield__label">password</label>
+						</div>
+						<br>
+						<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Login</button>
+					
+					</form>
+   				
+ 			 </div>
+ 			
+		</div>
+    	
+    </div>
+	  
+	
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+       <div class="page-content mdl-grid" >
+      <div class="mdl-cell mdl-cell--4-col" style="margin:0 auto;">
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin:0 auto;">
+      <div class="mdl-card__title">
+      <img src="user.png" style="margin:0 auto;">
+        </div>
+        <div class="mdl-card__supporting-text" style="padding-left:50px;">
+          <h2 class="mdl-card__title-text">Welcome to GBPEC Portal</h2>
+        </div>
+       <div class="mdl-card__actions mdl-card--border">
+       <form style="padding-left:50px;">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+              <input type="text" class="mdl-textfield__input" name="username" >
+              <label class="mdl-textfield__label">Username</label>
+
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input type="password" class="mdl-textfield__input" name="password">
+              <label class="mdl-textfield__label">password</label>
+            </div>
+            <br>
+            <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Login</button>
+          
+          </form>
+          
+       </div>
+      
+    </div>
+      
+    </div>
+    
+    </section>
+    
+  </main>
+  <footer class="mdl-mini-footer" style="padding-top:10px; padding-bottom:10px">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">GBPEC Portal</div>
+    <ul class="mdl-mini-footer__link-list">
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Privacy & Terms</a></li>
+    </ul>
+  </div>
+</footer>
+
+</div>
+	
+	<script src="./material.min.js"></script>
+
+</body>
+</html>

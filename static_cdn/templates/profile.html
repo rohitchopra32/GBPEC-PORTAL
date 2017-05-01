@@ -1,0 +1,492 @@
+{% load staticfiles %}
+{% load postman_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/material.min.css' %}">
+  <script src="{% static 'js/material.min.js' %}"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<style>
+	html, body{
+    font-family:  'Open Sans', sans-serif;;
+  }
+	
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 520px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  height: 400px;
+  {% for p in profile %}
+  {% if p.profile_pic %}
+  background:
+    url('{{ p.profile_pic.url }}') top  center / cover;
+   {% endif %}
+  {% endfor %}
+}
+body {
+  display: flex;
+}
+
+.file_input_div {
+  margin: auto;
+  width: 250px;
+  height: 40px;
+}
+
+.file_input {
+  float: left;
+}
+
+#file_input_text_div {
+  width: 200px;
+  margin-top: -8px;
+  margin-left: 5px;
+}
+
+.none {
+  display: none;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.thumbnail{
+	display:block;
+	padding:4px;
+	margin-bottom:20px;
+	line-height:1.42857143;
+	background-color:#fff;
+	border:1px solid #ddd;
+	border-radius:4px;
+	-webkit-transition:border .2s ease-in-out;
+	-o-transition:border .2s ease-in-out;
+	transition:border .2s ease-in-out;
+}
+.thumbnail a>img,.thumbnail>img{
+	display:block;
+	max-width:100%;
+	height:auto;
+}
+.mdl-card{
+	min-height: 0px;
+}
+</style>
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" style="overflow:hidden;">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title"><a href="/{{request.user.username}}/" style="color: #fff; text-decoration: none;">GBPEC Portal</a></span>
+      
+      <div class="mdl-layout-spacer"></div>
+       <span class="mdl-layout-title">{{ class }}</span>
+      <div class="mdl-layout-spacer"></div>
+      
+     	<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <form action="" method="POST">
+        {%csrf_token%}
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="query"
+                 id="waterfall-exp">
+        </div>
+        </form>
+      </div>
+
+     
+</button>
+<a id="demo-menu-lower-right" class="mdl-button mdl-js-button" style="text-transform:none; color:white;">
+        {{ request.user.username }}<span><i class="material-icons">arrow_drop_down</i></span>
+</a>
+
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-right">
+  <li class="mdl-menu__item"><a class="" href="/{{ request.user.username }}/profile/">Profile</a></li>
+  <li class="mdl-menu__item"><a class="" href="/{{ request.user.username }}/edit_profile/">Edit Profile</a></li>
+  <li class="mdl-menu__item"><a class="" href="/logout/">sign out</a></li>
+  
+</ul>
+    
+</div>
+  </header>
+  <div class="mdl-layout__drawer" >
+    <span class="mdl-layout-title" style="background-color: #3f51b5;"><a href="/{{request.user.username}}/" style="color: #fff; text-decoration: none;">GBPEC Portal</a></span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/messages/write/">Compose</a>
+      
+      <a class="mdl-navigation__link" href="/messages/inbox/"><span class="mdl-badge"{% postman_unread as unread_count %}
+      {% if unread_count %} data-badge="{{ unread_count }}"{% endif %}>Inbox</span></a>
+      
+      <a class="mdl-navigation__link" href="/messages/sent/">Outbox</a>
+      <a class="mdl-navigation__link" href="/messages/trash/">Trash</a>
+      
+      
+    </nav>
+  </div>
+
+  <main class="mdl-layout__content">
+    <div class="page-content">
+    	<div class="mdl-grid">
+
+    		<div class="mdl-cell mdl-cell--5-col" style="">
+    		{% for p in profile %}
+				<div class="demo-card-square mdl-card mdl-shadow--6dp" style="margin: 0 auto;">
+				  <div class="mdl-card__title mdl-card--expand">
+				 
+				  </div>
+				 
+				  <div class="mdl-card__supporting-text">
+				  <h2 class="mdl-card__title-text" style="color: black;">{{ p.first_name|ljust:1|capfirst }} {% if p.middle_name is not None%}{{ p.middle_name|ljust:1|capfirst}}{%  endif %} {{ p.last_name|ljust:1|capfirst}}</h2>
+				   {% if p.roll_no %} <h6 class="" style="margin: 0;">Roll no:{{ p.roll_no }}</h6> {% endif %}
+				   {% if p.position %}<h6 style="margin: 0;"> {{p.position|capfirst}}</h6>{% endif %}
+				   {% if p.contact %}<h6 class="" style="margin: 0;">Contact:{{ p.contact }}</h6>{% endif %}
+				   {% if p.branch %}<h6 class="" style="margin: 0;">Branch:{{ p.branch }}</h6>{% endif %}
+				  </div>
+				  {% if author %}
+				  <div class="mdl-card__actions mdl-card--border">
+				    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/{{request.user.username}}/edit_profile/">
+				      Edit Profile
+				    </a>
+				  </div>
+				  {% endif %}
+				</div>
+			{% endfor %}
+					
+			</div>
+			<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+			<div class="mdl-tabs mdl-js-tabs">
+            <div class="mdl-tabs__tab-bar" style="margin-bottom: 10px;">
+               <a href="#tab1-panel" class="mdl-tabs__tab is-active">Classrooms</a>
+               <a href="#tab2-panel" class="mdl-tabs__tab">Posts</a>
+               <a href="#tab3-panel" class="mdl-tabs__tab">Fourms</a>
+            </div>
+            {% if principal %}
+            <div class="mdl-tabs__panel is-active" id="tab1-panel">
+            
+            	<div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">Your Classrooms</h2>
+				</div>
+               {% for c in classroom %}
+               <div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto;  width:100% ; ">
+				  <div class="mdl-card__media" style="background:  url('{{ c.background.image.url }}') top  center / cover;">
+				  <img src="{{ c.background.image.url }}">
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ c.name }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     {{ c.description }}
+				     
+				     Teacher: 
+					{{ c.teacher }}
+				    </div>
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{request.user.username}}/{{ c.slug }}/">Enter Classroom</a>
+				    </div>
+				</div>
+				
+				
+				{% endfor %}
+            
+            	<div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">All Classrooms</h2>
+				</div>
+
+				{% for c in allclassroom %}
+	               <div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto;  width: 100%;">
+					  <div class="mdl-card__media">
+					  </div>
+					    <div class="mdl-card__title">
+					      <h2 class="mdl-card__title-text">{{ c.name }}</h2>
+					    </div>
+					    <div class="mdl-card__supporting-text">
+					     {{ c.description }}
+					     
+					     Teacher: 
+						{{ c.teacher }}
+					    </div>
+					    <div class="mdl-card__actions mdl-card--border">
+					      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{request.user.username}}/{{ c.slug }}/">Enter Classroom</a>
+					    </div>
+					</div>
+				
+				
+				{% endfor %}
+            </div>
+            {% else %}
+             <div class="mdl-tabs__panel is-active" id="tab1-panel">
+            {% if classroom %}
+               {% for c in classroom %}
+               
+               <div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto;  width:70%;">
+				  <div class="mdl-card__media" style="background:  url('{{ c.background.image.url }}') top  center / cover;">
+				  <img src="{{ c.background.image.url }}"  height="150px">
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ c.name }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     {{ c.description }}
+				     
+				     Teacher: 
+					{{ c.teacher }}
+				    </div>
+				    {% if author %}
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{request.user.username}}/{{ c.slug }}/">Enter Classroom</a>
+				    </div>
+
+				    {% endif %}
+				</div>
+				
+				{% endfor %}
+				{% else %}
+				<div class="mdl-card__title" style="margin: 0 auto; text-align: center;">
+				      <h2 class="mdl-card__title-text">No Classrooms</h2>
+				    </div>
+				
+				{% endif %}
+            </div>
+            {% endif %}
+            {% if principal%}
+            <div class="mdl-tabs__panel" id="tab2-panel">
+            <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">Your Post</h2>
+				</div>
+				
+				{% for p in post %}
+				<div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto; width:100%">
+				  <div class="mdl-card__media">
+				    
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ p.title }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     {{ p.content }}
+				     
+					{{ p.post_type }}
+					
+					{{ p.timestamp|timesince }} ago
+				    </div>
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{ request.user.username }}/post/{{ p.slug }}/">View Post</a>
+				    </div>
+				</div>
+				{% endfor %}
+
+            	<div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">All Post</h2>
+				</div>
+				{% for p in allpost %}
+				<div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto; width: 100%;">
+				  <div class="mdl-card__media">
+				    
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ p.title }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     {{ p.content }}
+				     
+					{{ p.post_type }}
+					
+					{{ p.timestamp|timesince }} ago
+				    </div>
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{ request.user.username }}/post/{{ p.slug }}/">View Post</a>
+				    </div>
+				</div>
+				
+				{% endfor %}
+            </div>
+            {% else %}
+            <div class="mdl-tabs__panel" id="tab2-panel">
+            {% if post %}
+            {% for p in post %}
+				<div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto; width: 100%;">
+				  <div class="mdl-card__media">
+				    
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ p.title }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     {{ p.content }}
+				     
+					{{ p.post_type }}
+					
+					{{ p.timestamp|timesince }} ago
+				    </div>
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{ request.user.username }}/post/{{ p.slug }}/">View Post</a>
+				    </div>
+				</div>
+				
+				{% endfor %}
+				{% else %}
+				<div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">No Posts</h2>
+				    </div>
+				 {% endif %}
+
+			</div>
+            {% endif %}
+            
+            {% if principal%}
+            <div class="mdl-tabs__panel" id="tab3-panel">
+            {% if subscribed %}
+            <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">Subscribed Forums</h2>
+				</div>
+				
+				{% for p in subscribed %}
+				<div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto; width:100%">
+				  <div class="mdl-card__media">
+				    
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ p.title }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     Category: {{ p.category }}<br>
+				     Creator: {{ p.creator }}<br>
+					{{ p.created|timesince }} ago
+				    </div>
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{ request.user.username }}/forum/{{ p.slug }}/">View Forum</a>
+				    </div>
+				</div>
+				{% endfor %}
+			{% endif %}
+			{% if created %}
+			<div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">Created Forums</h2>
+				</div>
+				
+				{% for p in created %}
+				<div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto; width:100%">
+				  <div class="mdl-card__media">
+				    
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ p.title }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     Category: {{ p.category }}<br>
+				     Creator: {{ p.creator }}<br>
+					{{ p.created|timesince }} ago
+				    </div>
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{ request.user.username }}/forum/{{ p.slug }}/">View Forum</a>
+				    </div>
+				</div>
+				{% endfor %}
+			{% endif %}
+			{% if allforums %}
+            	<div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">All Forums</h2>
+				</div>
+				{% for p in allforums %}
+				<div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto; width: 100%;">
+				  <div class="mdl-card__media">
+				    
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ p.title }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     Category: {{ p.category }}<br>
+				     Creator: {{ p.creator }}<br>
+					{{ p.timestamp|timesince }} ago
+				    </div>
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{ request.user.username }}/forum/{{ p.slug }}/">View forum</a>
+				    </div>
+				</div>
+				
+				{% endfor %}
+			{% else %}
+			<div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">No Forums</h2>
+			</div>
+
+			{% endif %}
+            </div>
+           {% else %}
+            <div class="mdl-tabs__panel" id="tab3-panel">
+            {% if subscribed %}
+            <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">Subscribed Forums</h2>
+				</div>
+				
+				{% for p in subscribed %}
+				<div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto; width:100%">
+				  <div class="mdl-card__media">
+				    
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ p.title }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     Category: {{ p.category }}<br>
+				     Creator: {{ p.creator }}<br>
+					{{ p.created|timesince }} ago
+				    </div>
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{ request.user.username }}/forum/{{ p.slug }}/">View Forum</a>
+				    </div>
+				</div>
+				{% endfor %}
+			{% endif %}
+
+			{% if created %}
+			<div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text" style="margin: 0 auto;">Created Forums</h2>
+				</div>
+				
+				{% for p in created %}
+				<div class="mdl-card mdl-shadow--6dp mdl-card--horizontal" style="margin:30px auto; width:100%">
+				  <div class="mdl-card__media">
+				    
+				  </div>
+				    <div class="mdl-card__title">
+				      <h2 class="mdl-card__title-text">{{ p.title }}</h2>
+				    </div>
+				    <div class="mdl-card__supporting-text">
+				     Category: {{ p.category }}<br>
+				     Creator: {{ p.creator }}<br>
+					{{ p.created|timesince }} ago
+				    </div>
+				    <div class="mdl-card__actions mdl-card--border">
+				      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"  href="/{{ request.user.username }}/forum/{{ p.slug }}/">View Forum</a>
+				    </div>
+				</div>
+				{% endfor %}
+			{% endif %}
+			</div>
+            {% endif %}
+         </div>
+			
+			
+					
+					
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</main>
+</div>
+</body>
+</html>

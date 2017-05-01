@@ -1,0 +1,331 @@
+{% extends "postman/base.html" %}
+{% load i18n static %}{% load postman_tags %}
+{% block content %}
+<div id="postman" class="pm" style="background:url('{% static 'postman/img/background.jpg'%}');">
+
+<div style="background-color: #e2e2e2"><h3 style="text-align: center; margin-top: auto; "><span style="float: left; padding-left: 15px "><a href="{{ next_url }}"><i class="material-icons" style="font-size: 42px;">keyboard_backspace</i></a></span>{% if pm_messages|length > 1 %}{% trans "Conversation" %}{% else %}{% trans "Message" %}{% endif %}</h3></div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+      <script type="text/javascript">
+  $("window").ready(function() {
+  $("main").css("overflow", "hidden");
+  $('#textarea').addClass('textarea');
+  $('#textarea').attr('placeholder','Type Here....');
+  $('#textarea').attr('rows','2');
+  $('#textarea').attr('cols','5');
+  $( "#textarea" ).focus();
+  $('#over').scrollTop($('#over')[0].scrollHeight,5000, {easing:'elasout'});
+      });
+  $("#textarea").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        $("#reply").submit();
+    }
+});
+  
+      </script>
+<div id="over" >
+{% for message in pm_messages %}
+<div class="pm_message{% if message.is_pending %} pm_pending{% endif %}{% if message.is_rejected %} pm_rejected{% endif %}{% if message.sender == user and message.sender_archived or message.recipient == user and message.recipient_archived %} pm_archived{% endif %}{% if message.sender == user and message.sender_deleted_at or message.recipient == user and message.recipient_deleted_at %} pm_deleted{% endif %}{% if message.recipient == user and not message.read_at %} pm_unread{% endif %}" style="">
+ <ol class="chat">
+ {% if message.obfuscated_sender == request.user.username %}
+ <li class="self">
+        <div class="avatar"></div>
+      <div class="msg">
+        {% if message.is_rejected %}  
+        <div class="pm_status">{% trans "Rejected" %}{% if message.moderation_reason %}{% trans ":" %} {{ message.moderation_reason }}{% endif %}</div>{% endif %}
+
+        <p>{{ message.body|linebreaksbr }}</p>
+        <time>{{ message.sent_at|date:"DATETIME_FORMAT"}}</time>
+      </div>
+ </li>
+{% else %}
+<li class="other">
+        <div class="avatar"></div>
+	      <div class="msg">
+	        {% if message.is_rejected %}  <div class="pm_status">{% trans "Rejected" %}{% if message.moderation_reason %}{% trans ":" %} {{ message.moderation_reason }}{% endif %}</div>{% endif %}
+
+	        <p>{{ message.body|linebreaksbr }}</p>
+	        <time>{{ message.sent_at|date:"DATETIME_FORMAT"}}</time>
+	      </div>
+ </li>
+ {% endif %}
+
+</ol>
+</div>
+{% if forloop.last %}
+<form action="" method="post">{% csrf_token %}
+<input type="hidden" {% if pm_messages|length > 1 and message.thread_id %}name="tpks" value="{{ message.thread_id }}"{% else %}name="pks" value="{{ message.pk }}"{% endif %} />
+<span id="pm_buttons">
+<button type="submit" class="mdl-button" onclick="this.form.action='{% url 'postman:delete' %}?next={{ next_url|urlencode }}'">{% trans "Delete" %}</button>
+{% if not archived %}<button class="mdl-button" type="submit" onclick="this.form.action='{% url 'postman:archive' %}?next={{ next_url|urlencode }}'">{% trans "Archive" %}</button>{% endif %}
+</span>
+</form>
+{% endif %}
+
+
+{% endfor %}
+
+</div>
+{% if messages %}
+              <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{% if "html_safe" in message.tags %}{{ message|safe }}{% else %}{{ message }}{% endif %}</li>
+                {% endfor %}
+              </ul>
+              <hr>
+        {% endif %}
+
+{% if reply_to_pk %}
+<form action="{% url 'postman:reply' reply_to_pk %}?next={{ next_url|urlencode }}" method="post" id="reply">{% csrf_token %}
+{{ form.body }}
+</form>{% endif %}
+</div>
+
+    
+ 
+
+
+
+
+    <style type="text/css">
+    	@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+html, body {
+    font-family: 'Lato', sans-serif;
+    margin: 0px auto;
+}
+::selection{
+  background: rgba(82,179,217,0.3);
+  color: inherit;
+}
+a{
+  color: rgba(82,179,217,0.9);
+}
+
+
+/* M E S S A G E S */
+
+.chat {
+    list-style: none;
+    background: none;
+    margin: 0;
+    padding: 0 0 0 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.chat li {
+    padding: 0.5rem;
+    overflow: hidden;
+    display: flex;
+}
+.chat .avatar {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: block;
+    z-index: 2;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+}
+.other:before {
+    content: "";
+    position: relative;
+    top: 0px;
+    right: 0px;
+    left: 40px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #fff;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+.chat .avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.chat .day {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: #c0c0c0;
+    height: 20px;
+    text-shadow: 7px 0px 0px #e5e5e5, 6px 0px 0px #e5e5e5, 5px 0px 0px #e5e5e5, 4px 0px 0px #e5e5e5, 3px 0px 0px #e5e5e5, 2px 0px 0px #e5e5e5, 1px 0px 0px #e5e5e5, 1px 0px 0px #e5e5e5, 0px 0px 0px #e5e5e5, -1px 0px 0px #e5e5e5, -2px 0px 0px #e5e5e5, -3px 0px 0px #e5e5e5, -4px 0px 0px #e5e5e5, -5px 0px 0px #e5e5e5, -6px 0px 0px #e5e5e5, -7px 0px 0px #e5e5e5;
+    box-shadow: inset 20px 0px 0px #e5e5e5, inset -20px 0px 0px #e5e5e5, inset 0px -2px 0px #d7d7d7;
+    line-height: 38px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.other .msg {
+    order: 1;
+    border-top-left-radius: 0px;
+    box-shadow: -1px 2px 0px #D4D4D4;
+}
+
+
+.self {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.self .msg {
+    order: 1;
+    border-bottom-right-radius: 0px;
+    box-shadow: 1px 2px 0px #D4D4D4;
+}
+.self .avatar {
+    order: 2;
+}
+.self .avatar:after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    bottom: 19px;
+    right: 0px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #fff;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: 0px 2px 0px #D4D4D4;
+}
+
+.msg {
+    background: white;
+    min-width: 50px;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);
+}
+.msg p {
+    font-size: 0.8rem;
+    margin: 0 0 0.2rem 0;
+    color: #777;
+}
+.msg img {
+    position: relative;
+    display: block;
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #eee;
+    transition: all .4s cubic-bezier(0.565, -0.260, 0.255, 1.410);
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+@media screen and (max-width: 800px) {
+    .msg img {
+    width: 300px;
+}
+}
+@media screen and (max-width: 550px) {
+    .msg img {
+    width: 200px;
+}
+}
+
+.msg time {
+    font-size: 0.7rem;
+    color: #ccc;
+    margin-top: 3px;
+    float: right;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.msg time:before{
+    content:"\f017";
+    color: #ddd;
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+
+
+
+::-webkit-scrollbar {
+	overflow: hidden;
+    min-width: 12px;
+    width: 12px;
+    max-width: 12px;
+    min-height: 12px;
+    height: 12px;
+    max-height: 12px;
+    background: #e5e5e5;
+    box-shadow: inset 0px 50px 0px rgba(82,179,217,0.9), inset 0px -52px 0px #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border: none;
+    border-radius: 100px;
+    border: solid 3px #e5e5e5;
+    box-shadow: inset 0px 0px 3px #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b0b0b0;
+  box-shadow: inset 0px 0px 3px #888;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #aaa;
+  box-shadow: inset 0px 0px 3px #7f7f7f;
+}
+
+::-webkit-scrollbar-button {
+    display: block;
+    height: 26px;
+}
+
+/* T Y P E */
+form{
+	width: 100%;
+	overflow: hidden;
+}
+#over{
+	overflow: auto;
+	height:450px;
+}
+@media only screen and (max-width: 479px) {
+	#over{
+		height: 356px;
+	}
+
+	}
+.textarea {
+    
+    width: inherit;
+    height: 32px;
+    z-index: 99;
+    background: #fafafa;
+    color: #666;
+    font-weight: 400;
+}
+
+    </style>
+
+
+{% endblock %}

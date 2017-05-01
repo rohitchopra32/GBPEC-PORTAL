@@ -1,0 +1,1066 @@
+************* Module classroom.views
+C: 20, 0: No space allowed around keyword argument assignment
+def classroom_create(request, username = None):
+                                       ^ (bad-whitespace)
+W: 21, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 22, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 23, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 23, 0: No space allowed around keyword argument assignment
+	group_id = User.objects.filter(username = request.user.username).values('groups')
+                                         ^ (bad-whitespace)
+W: 24, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 24, 0: No space allowed around keyword argument assignment
+	group = str(Group.objects.get(id = group_id))
+                                  ^ (bad-whitespace)
+W: 25, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 26, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 27, 0: Trailing whitespace (trailing-whitespace)
+W: 28, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 28, 0: No space allowed before :
+	if 'teacher' in group :
+                       ^ (bad-whitespace)
+C: 29, 0: Line too long (126/100) (line-too-long)
+W: 29, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 29, 0: No space allowed around keyword argument assignment
+		t = teacher.objects.get_or_create(name = request.user.get_full_name(), username = request.user, email = request.user.email )
+                                         ^ (bad-whitespace)
+C: 29, 0: No space allowed around keyword argument assignment
+		t = teacher.objects.get_or_create(name = request.user.get_full_name(), username = request.user, email = request.user.email )
+                                                                                  ^ (bad-whitespace)
+C: 29, 0: No space allowed around keyword argument assignment
+		t = teacher.objects.get_or_create(name = request.user.get_full_name(), username = request.user, email = request.user.email )
+                                                                                                        ^ (bad-whitespace)
+C: 29, 0: No space allowed before bracket
+		t = teacher.objects.get_or_create(name = request.user.get_full_name(), username = request.user, email = request.user.email )
+                                                                                                                             ^ (bad-whitespace)
+W: 30, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 30, 0: No space allowed around keyword argument assignment
+		classrooms = Classroom.objects.filter(teacher = request.user)
+                                                ^ (bad-whitespace)
+C: 31, 0: Trailing whitespace (trailing-whitespace)
+W: 31, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 32, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 32, 0: Exactly one space required after comma
+		context.update({'form':form,"group":True, "class":classrooms})
+                             ^ (bad-whitespace)
+W: 33, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 34, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 35, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 35, 0: No space allowed around keyword argument assignment
+			if Classroom.objects.filter(name = instance.name).exists():
+                                    ^ (bad-whitespace)
+W: 36, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 37, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 38, 0: Trailing whitespace (trailing-whitespace)
+W: 38, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 39, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 40, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 41, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 42, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 43, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 44, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 45, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 46, 0: Line too long (130/100) (line-too-long)
+W: 46, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 47, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 52, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 52, 0: No space allowed before :
+	if 'student' in group :
+                       ^ (bad-whitespace)
+C: 53, 0: Line too long (120/100) (line-too-long)
+W: 53, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 53, 0: No space allowed around keyword argument assignment
+		s = student.objects.get_or_create(roll_no = username, name = request.user.get_full_name(), email = request.user.email)
+                                            ^ (bad-whitespace)
+C: 53, 0: No space allowed around keyword argument assignment
+		s = student.objects.get_or_create(roll_no = username, name = request.user.get_full_name(), email = request.user.email)
+                                                             ^ (bad-whitespace)
+C: 53, 0: No space allowed around keyword argument assignment
+		s = student.objects.get_or_create(roll_no = username, name = request.user.get_full_name(), email = request.user.email)
+                                                                                                   ^ (bad-whitespace)
+W: 54, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 54, 0: No space allowed around keyword argument assignment
+		c = student.objects.get(roll_no = username)
+                                  ^ (bad-whitespace)
+W: 55, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 55, 0: No space allowed around keyword argument assignment
+		c1 = student.objects.filter(roll_no = username).values('classroom')
+                                      ^ (bad-whitespace)
+C: 56, 0: Trailing whitespace (trailing-whitespace)
+W: 57, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 57, 0: Exactly one space required around assignment
+		l=[]
+   ^ (bad-whitespace)
+W: 58, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 59, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 60, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 61, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 62, 0: Trailing whitespace (trailing-whitespace)
+W: 62, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 63, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 64, 0: Trailing whitespace (trailing-whitespace)
+C: 65, 0: Trailing whitespace (trailing-whitespace)
+W: 66, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 68, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 69, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 72, 0: Trailing whitespace (trailing-whitespace)
+W: 72, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 73, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 74, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 75, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 75, 0: No space allowed around keyword argument assignment
+					clas = Classroom.objects.get(code = code)
+                                       ^ (bad-whitespace)
+W: 76, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 77, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 78, 0: Trailing whitespace (trailing-whitespace)
+W: 79, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 80, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 81, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 82, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 83, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 84, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 85, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 86, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 87, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 88, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 89, 0: Trailing whitespace (trailing-whitespace)
+C: 90, 0: Trailing whitespace (trailing-whitespace)
+W: 91, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 92, 0: Trailing whitespace (trailing-whitespace)
+W: 92, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 93, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 97, 0: Trailing whitespace (trailing-whitespace)
+C: 98, 0: Trailing whitespace (trailing-whitespace)
+C: 99, 0: Trailing whitespace (trailing-whitespace)
+W:102, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:103, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:104, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:105, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:106, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:107, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:108, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:109, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:110, 0: Trailing whitespace (trailing-whitespace)
+W:111, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:114, 0: Exactly one space required after comma
+def classroom_full(request,username = None,  slug = None):
+                          ^ (bad-whitespace)
+C:114, 0: No space allowed around keyword argument assignment
+def classroom_full(request,username = None,  slug = None):
+                                    ^ (bad-whitespace)
+C:114, 0: Exactly one space required after comma
+def classroom_full(request,username = None,  slug = None):
+                                          ^ (bad-whitespace)
+C:114, 0: No space allowed around keyword argument assignment
+def classroom_full(request,username = None,  slug = None):
+                                                  ^ (bad-whitespace)
+W:115, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:116, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:117, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:117, 0: No space allowed around keyword argument assignment
+	clas = Classroom.objects.get(slug = slug)
+                                   ^ (bad-whitespace)
+W:118, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:118, 0: No space allowed around keyword argument assignment
+	member = student.objects.filter(classroom = clas)
+                                           ^ (bad-whitespace)
+W:119, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:120, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:120, 0: No space allowed around keyword argument assignment
+	posts = Post.objects.filter(classroom = clas).order_by("-timestamp")
+                                       ^ (bad-whitespace)
+W:121, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:122, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:122, 0: Exactly one space required after comma
+	context = {"form":form, "posts":posts,'class':clas}
+                                      ^ (bad-whitespace)
+W:123, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:123, 0: No space allowed around keyword argument assignment
+	group_id = User.objects.filter(username = request.user.username).values('groups')
+                                         ^ (bad-whitespace)
+W:124, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:124, 0: No space allowed around keyword argument assignment
+	group = str(Group.objects.get(id = group_id))
+                                  ^ (bad-whitespace)
+W:125, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:126, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:127, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:129, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:130, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:131, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:132, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:133, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:134, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:135, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:135, 0: No space allowed around keyword argument assignment
+	t = teacher.objects.get(username = clas.teacher)
+                                  ^ (bad-whitespace)
+C:136, 0: Trailing whitespace (trailing-whitespace)
+W:136, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:137, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:138, 0: Wrong hanging indentation (add 10 spaces).
+		"object_list":queryset,
+  ^         | (bad-continuation)
+C:139, 0: Wrong hanging indentation (add 10 spaces).
+		"title": "list",
+  ^         | (bad-continuation)
+C:140, 0: Wrong hanging indentation (add 10 spaces).
+		"page_request_var":page_request_var,
+  ^         | (bad-continuation)
+C:141, 0: Wrong hanging indentation (add 10 spaces).
+		"form":form,
+  ^         | (bad-continuation)
+C:142, 0: Wrong hanging indentation (add 10 spaces).
+		"posts":posts,
+  ^         | (bad-continuation)
+C:143, 0: Wrong hanging indentation (add 10 spaces).
+		'class':clas,
+  ^         | (bad-continuation)
+C:144, 0: Wrong hanging indentation (add 10 spaces).
+		'member':member,
+  ^         | (bad-continuation)
+C:145, 0: Wrong hanging indentation (add 10 spaces).
+		'teacher':t,
+  ^         | (bad-continuation)
+C:146, 0: Wrong hanging indentation.
+	}
+ ^      |   | (bad-continuation)
+W:147, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:147, 0: No space allowed before :
+	if 'teacher' in group :
+                       ^ (bad-whitespace)
+W:148, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:149, 0: Trailing whitespace (trailing-whitespace)
+W:149, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:151, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:152, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:153, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:154, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:155, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:156, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:157, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:158, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:159, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:159, 0: No space allowed before :
+			if request.FILES :
+                    ^ (bad-whitespace)
+W:160, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:161, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:161, 0: No space allowed around keyword argument assignment
+					file.objects.create(Post = instance, file=f)
+                              ^ (bad-whitespace)
+W:162, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:162, 0: No space allowed before comma
+			return HttpResponseRedirect('/%s/%s/'%(request.user.username ,clas.slug))
+                                                                ^ (bad-whitespace)
+C:162, 0: Exactly one space required after comma
+			return HttpResponseRedirect('/%s/%s/'%(request.user.username ,clas.slug))
+                                                                ^ (bad-whitespace)
+C:163, 0: Trailing whitespace (trailing-whitespace)
+C:164, 0: Trailing whitespace (trailing-whitespace)
+W:165, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:165, 0: No space allowed before :
+	if 'student' in group :
+                       ^ (bad-whitespace)
+W:166, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:166, 0: Exactly one space required after assignment
+		form =StudentPostForm(request.POST or None, request.FILES or None)
+       ^ (bad-whitespace)
+C:167, 0: Trailing whitespace (trailing-whitespace)
+W:167, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:169, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:170, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:171, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:172, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:173, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:174, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:175, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:176, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:177, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:178, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:178, 0: No space allowed before :
+			if request.FILES :
+                    ^ (bad-whitespace)
+W:179, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:180, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:180, 0: No space allowed around keyword argument assignment
+					file.objects.create(Post = instance, file=f)
+                              ^ (bad-whitespace)
+W:181, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:181, 0: No space allowed before comma
+			return HttpResponseRedirect('/%s/%s/'%(request.user.username ,clas.slug))
+                                                                ^ (bad-whitespace)
+C:181, 0: Exactly one space required after comma
+			return HttpResponseRedirect('/%s/%s/'%(request.user.username ,clas.slug))
+                                                                ^ (bad-whitespace)
+W:183, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:184, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:185, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:186, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:187, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:188, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:189, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:190, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:192, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:196, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:196, 0: No space allowed around keyword argument assignment
+	post = Post.objects.filter(slug = slug)
+                                 ^ (bad-whitespace)
+W:197, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:197, 0: No space allowed around keyword argument assignment
+	instance = get_object_or_404(Post, slug = slug)
+                                         ^ (bad-whitespace)
+W:198, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:198, 0: No space allowed around keyword argument assignment
+	files = file.objects.filter(Post = instance)
+                                  ^ (bad-whitespace)
+W:199, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:199, 0: No space allowed around keyword argument assignment
+	group_id = User.objects.filter(username = request.user.username).values('groups')
+                                         ^ (bad-whitespace)
+W:200, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:200, 0: No space allowed around keyword argument assignment
+	group = str(Group.objects.get(id = group_id))
+                                  ^ (bad-whitespace)
+W:201, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:201, 0: Exactly one space required after comma
+	context = {'post': instance,'file':files}
+                            ^ (bad-whitespace)
+W:202, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:203, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:203, 0: Exactly one space required around comparison
+		if str(p.user).strip()==username.strip():
+                        ^^ (bad-whitespace)
+W:204, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:205, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:206, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:207, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:207, 0: Exactly one space required after comma
+	print(context['author'],'/n',p.user,'/n',username.strip())
+                        ^ (bad-whitespace)
+C:207, 0: Exactly one space required after comma
+	print(context['author'],'/n',p.user,'/n',username.strip())
+                             ^ (bad-whitespace)
+C:207, 0: Exactly one space required after comma
+	print(context['author'],'/n',p.user,'/n',username.strip())
+                                    ^ (bad-whitespace)
+C:207, 0: Exactly one space required after comma
+	print(context['author'],'/n',p.user,'/n',username.strip())
+                                         ^ (bad-whitespace)
+W:208, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:209, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:210, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:211, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:212, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:213, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:214, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:215, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:216, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:219, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:219, 0: No space allowed around keyword argument assignment
+	instance = get_object_or_404(Post, user = request.user, slug = slug )
+                                         ^ (bad-whitespace)
+C:219, 0: No space allowed around keyword argument assignment
+	instance = get_object_or_404(Post, user = request.user, slug = slug )
+                                                              ^ (bad-whitespace)
+C:219, 0: No space allowed before bracket
+	instance = get_object_or_404(Post, user = request.user, slug = slug )
+                                                                     ^ (bad-whitespace)
+W:220, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:220, 0: No space allowed around keyword argument assignment
+	group_id = User.objects.filter(username = request.user.username).values('groups')
+                                         ^ (bad-whitespace)
+W:221, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:221, 0: No space allowed around keyword argument assignment
+	group = str(Group.objects.get(id = group_id))
+                                  ^ (bad-whitespace)
+W:222, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:223, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:223, 0: No space allowed before :
+	if 'teacher' in group :
+                       ^ (bad-whitespace)
+W:224, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:224, 0: No space allowed around keyword argument assignment
+		form = PostForm(request.POST or None, instance = instance)
+                                                 ^ (bad-whitespace)
+C:225, 0: Trailing whitespace (trailing-whitespace)
+W:225, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:226, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:227, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:228, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:229, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:230, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:231, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:232, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:233, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:234, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:235, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:235, 0: No space allowed around keyword argument assignment
+				file.objects.create(Post = instance, file=f)
+                             ^ (bad-whitespace)
+W:236, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:236, 0: Exactly one space required after comma
+			return HttpResponseRedirect('/%s/post/%s/'%(request.user.username,slug))
+                                                                    ^ (bad-whitespace)
+C:237, 0: Trailing whitespace (trailing-whitespace)
+W:238, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:238, 0: No space allowed before :
+	if 'student' in group :
+                       ^ (bad-whitespace)
+W:239, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:239, 0: Exactly one space required after assignment
+		form =StudentPostForm(request.POST or None, request.FILES or None)
+       ^ (bad-whitespace)
+C:240, 0: Trailing whitespace (trailing-whitespace)
+W:240, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:241, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:242, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:243, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:244, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:245, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:246, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:247, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:248, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:249, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:250, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:251, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:251, 0: No space allowed around keyword argument assignment
+				file.objects.create(Post = instance, file=f)
+                             ^ (bad-whitespace)
+W:252, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:252, 0: Exactly one space required after comma
+			return HttpResponseRedirect('/%s/post/%s/'%(request.user.username,slug))
+                                                                    ^ (bad-whitespace)
+W:253, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:255, 0: No space allowed around keyword argument assignment
+def post_delete(request, username = None,  slug=None):
+                                  ^ (bad-whitespace)
+C:255, 0: Exactly one space required after comma
+def post_delete(request, username = None,  slug=None):
+                                        ^ (bad-whitespace)
+W:256, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:256, 0: No space allowed around keyword argument assignment
+	instance = get_object_or_404(Post, slug = slug)
+                                         ^ (bad-whitespace)
+W:257, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:258, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:258, 0: No space allowed around keyword argument assignment
+	slug = Classroom.objects.get(name = classroom)
+                                   ^ (bad-whitespace)
+W:259, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:260, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:261, 0: Line too long (101/100) (line-too-long)
+W:261, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:262, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:266, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:267, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:267, 0: No space allowed around keyword argument assignment
+	group_id = User.objects.filter(username = request.user.username).values('groups')
+                                         ^ (bad-whitespace)
+W:268, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:268, 0: No space allowed around keyword argument assignment
+	group = str(Group.objects.get(id = group_id))
+                                  ^ (bad-whitespace)
+W:269, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:270, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:271, 0: Wrong hanging indentation (add 17 spaces).
+			Q(name__icontains=query)|
+   ^                | (bad-continuation)
+C:272, 0: Wrong hanging indentation (add 17 spaces).
+			Q(roll_no__icontains=query)|
+   ^                | (bad-continuation)
+C:273, 0: Wrong hanging indentation (add 17 spaces).
+			Q(batch__icontains=query)|
+   ^                | (bad-continuation)
+C:274, 0: Wrong hanging indentation (add 17 spaces).
+			Q(branch__icontains=query)|
+   ^                | (bad-continuation)
+C:275, 0: Wrong hanging indentation (add 17 spaces).
+			Q(email__icontains=query)|
+   ^                | (bad-continuation)
+C:276, 0: Wrong hanging indentation (add 17 spaces).
+			Q(contact__icontains=query)
+   ^                | (bad-continuation)
+C:277, 0: Wrong hanging indentation.
+			).distinct()
+   ^            |   | (bad-continuation)
+W:278, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:279, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:280, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:282, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:283, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:284, 0: Wrong hanging indentation (add 17 spaces).
+			Q(name__icontains=query)|
+   ^                | (bad-continuation)
+C:285, 0: Wrong hanging indentation (add 17 spaces).
+			Q(email__icontains=query)|
+   ^                | (bad-continuation)
+C:286, 0: Wrong hanging indentation (add 17 spaces).
+			Q(contact__icontains=query)
+   ^                | (bad-continuation)
+C:287, 0: Wrong hanging indentation.
+			).distinct()
+   ^            |   | (bad-continuation)
+W:288, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:289, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:290, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:291, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:291, 0: No space allowed before :
+	if 'teacher' in group :
+                       ^ (bad-whitespace)
+W:292, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:292, 0: No space allowed around keyword argument assignment
+		t1 = Classroom.objects.filter(teacher = request.user).values('id')
+                                        ^ (bad-whitespace)
+W:293, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:295, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:296, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:297, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:298, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:299, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:300, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:301, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:302, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:303, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:304, 0: Wrong hanging indentation (add 24 spaces).
+				Q(title__icontains=query)|
+    ^                       | (bad-continuation)
+C:305, 0: Wrong hanging indentation (add 24 spaces).
+				Q(slug__icontains=query)|
+    ^                       | (bad-continuation)
+C:306, 0: Wrong hanging indentation (add 24 spaces).
+				Q(content__icontains=query)
+    ^                       | (bad-continuation)
+C:307, 0: Wrong hanging indentation.
+				).filter(classroom__in = l).distinct()
+    ^                   |   | (bad-continuation)
+C:307, 0: No space allowed around keyword argument assignment
+				).filter(classroom__in = l).distinct()
+                           ^ (bad-whitespace)
+W:308, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:310, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:311, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:313, 0: Trailing whitespace (trailing-whitespace)
+W:314, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:315, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:316, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:317, 0: Wrong hanging indentation (add 24 spaces).
+				Q(name__icontains=query)|
+    ^                       | (bad-continuation)
+C:318, 0: Wrong hanging indentation (add 24 spaces).
+				Q(description__icontains=query)|
+    ^                       | (bad-continuation)
+C:319, 0: Wrong hanging indentation (add 24 spaces).
+				Q(slug__icontains=query)
+    ^                       | (bad-continuation)
+C:320, 0: Wrong hanging indentation.
+				).filter(pk__in = l).distinct()
+    ^                   |   | (bad-continuation)
+C:320, 0: No space allowed around keyword argument assignment
+				).filter(pk__in = l).distinct()
+                    ^ (bad-whitespace)
+W:321, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:322, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:323, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:325, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:326, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:326, 0: No space allowed around keyword argument assignment
+		c1 = student.objects.filter(roll_no = request.user.username).values('classroom')
+                                      ^ (bad-whitespace)
+W:327, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:327, 0: Exactly one space required around assignment
+		l=[]
+   ^ (bad-whitespace)
+W:328, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:329, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:330, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:331, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:332, 0: Trailing whitespace (trailing-whitespace)
+W:332, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:334, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:335, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:336, 0: Wrong hanging indentation (add 24 spaces).
+				Q(title__icontains=query)|
+    ^                       | (bad-continuation)
+C:337, 0: Wrong hanging indentation (add 24 spaces).
+				Q(slug__icontains=query)|
+    ^                       | (bad-continuation)
+C:338, 0: Wrong hanging indentation (add 24 spaces).
+				Q(content__icontains=query)
+    ^                       | (bad-continuation)
+C:339, 0: Wrong hanging indentation.
+				).filter(classroom__in = l)
+    ^                   |   | (bad-continuation)
+C:339, 0: No space allowed around keyword argument assignment
+				).filter(classroom__in = l)
+                           ^ (bad-whitespace)
+W:340, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:342, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:343, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:345, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:346, 0: Wrong hanging indentation (add 17 spaces).
+			Q(name__icontains = query)|
+   ^                | (bad-continuation)
+C:346, 0: No space allowed around keyword argument assignment
+			Q(name__icontains = query)|
+                     ^ (bad-whitespace)
+C:347, 0: Wrong hanging indentation (add 17 spaces).
+			Q(description__icontains = query)
+   ^                | (bad-continuation)
+C:347, 0: No space allowed around keyword argument assignment
+			Q(description__icontains = query)
+                            ^ (bad-whitespace)
+C:348, 0: Wrong hanging indentation.
+			 ).filter(pk__in = l)
+    ^           |   | (bad-continuation)
+C:348, 0: No space allowed around keyword argument assignment
+			 ).filter(pk__in = l)
+                    ^ (bad-whitespace)
+C:349, 0: Trailing whitespace (trailing-whitespace)
+W:350, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:351, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:352, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:353, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:354, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:355, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:356, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:357, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:358, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:360, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:361, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:366, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:367, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:367, 0: Exactly one space required around comparison
+	if request.user.username==username:
+                         ^^ (bad-whitespace)
+W:368, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:369, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:369, 0: No space allowed around keyword argument assignment
+	group_id = User.objects.filter(username = username).values('groups')
+                                         ^ (bad-whitespace)
+W:370, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:370, 0: No space allowed around keyword argument assignment
+	group = str(Group.objects.get(id = group_id))
+                                  ^ (bad-whitespace)
+W:371, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:372, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:372, 0: No space allowed around keyword argument assignment
+		t1 = User.objects.get(username = username)
+                                 ^ (bad-whitespace)
+W:373, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:373, 0: No space allowed around keyword argument assignment
+		t = teacher.objects.filter(username = t1)
+                                      ^ (bad-whitespace)
+W:374, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:374, 0: No space allowed around keyword argument assignment
+		c = Classroom.objects.filter(teacher = t1).order_by("-created")
+                                       ^ (bad-whitespace)
+W:375, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:375, 0: No space allowed around keyword argument assignment
+		p = Post.objects.filter(user = t1).order_by("-timestamp")
+                               ^ (bad-whitespace)
+W:377, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:378, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:378, 0: Exactly one space required after comma
+		context.update({'profile':t,'classroom':c,'post':p})
+                             ^ (bad-whitespace)
+C:378, 0: Exactly one space required after comma
+		context.update({'profile':t,'classroom':c,'post':p})
+                                           ^ (bad-whitespace)
+W:380, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:381, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:381, 0: No space allowed around keyword argument assignment
+		s = student.objects.filter(roll_no = username)
+                                     ^ (bad-whitespace)
+W:382, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:382, 0: No space allowed around keyword argument assignment
+		c1 = student.objects.filter(roll_no = username).values('classroom')
+                                      ^ (bad-whitespace)
+W:383, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:384, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:384, 0: Exactly one space required around assignment
+		l=[]
+   ^ (bad-whitespace)
+W:385, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:386, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:387, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:388, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:389, 0: Trailing whitespace (trailing-whitespace)
+W:389, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:391, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:391, 0: No space allowed around keyword argument assignment
+		c = Classroom.objects.filter(pk__in = l)
+                                      ^ (bad-whitespace)
+W:392, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:392, 0: No space allowed around keyword argument assignment
+		p = Post.objects.filter(user = request.user)
+                               ^ (bad-whitespace)
+W:394, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:394, 0: Exactly one space required after comma
+		context.update({'profile':s,'classroom':c, 'post':p})
+                             ^ (bad-whitespace)
+W:395, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:396, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:397, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:398, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:399, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:400, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:401, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:402, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:404, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:408, 0: Exactly one space required after comma
+def edit_profile(request,username):
+                        ^ (bad-whitespace)
+W:409, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:410, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:410, 0: No space allowed around keyword argument assignment
+	group_id = User.objects.filter(username = request.user.username).values('groups')
+                                         ^ (bad-whitespace)
+W:411, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:411, 0: No space allowed around keyword argument assignment
+	group = str(Group.objects.get(id = group_id))
+                                  ^ (bad-whitespace)
+W:413, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:414, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:414, 0: No space allowed around keyword argument assignment
+		instance = get_object_or_404(teacher, username = request.user)
+                                                 ^ (bad-whitespace)
+W:415, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:415, 0: No space allowed around keyword argument assignment
+		form = TeacherProfileForm(request.POST or None, request.FILES or None, instance = instance)
+                                                                                  ^ (bad-whitespace)
+W:416, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:417, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:418, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:418, 0: No space allowed around keyword argument assignment
+			instance = form.save(commit = False)
+                               ^ (bad-whitespace)
+W:419, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:420, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:421, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:423, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:424, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:424, 0: No space allowed around keyword argument assignment
+		instance = get_object_or_404(student, roll_no = request.user.username)
+                                                ^ (bad-whitespace)
+W:425, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:425, 0: No space allowed around keyword argument assignment
+		form = StudentProfileForm(request.POST or None, request.FILES or None, instance = instance)
+                                                                                  ^ (bad-whitespace)
+W:426, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:427, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:428, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:428, 0: No space allowed around keyword argument assignment
+			instance = form.save(commit = False)
+                               ^ (bad-whitespace)
+W:429, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:430, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:431, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:432, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:433, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:434, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:435, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:436, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:437, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:438, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:439, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:441, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:442, 0: Trailing newlines (trailing-newlines)
+C:  1, 0: Missing module docstring (missing-docstring)
+C: 20, 0: Missing function docstring (missing-docstring)
+R: 20, 0: Too many local variables (23/15) (too-many-locals)
+C: 29, 2: Invalid variable name "t" (invalid-name)
+E: 29, 6: Class 'teacher' has no 'objects' member (no-member)
+E: 30,15: Class 'Classroom' has no 'objects' member (no-member)
+E: 35, 6: Class 'Classroom' has no 'objects' member (no-member)
+C: 53, 2: Invalid variable name "s" (invalid-name)
+E: 53, 6: Class 'student' has no 'objects' member (no-member)
+C: 54, 2: Invalid variable name "c" (invalid-name)
+E: 54, 6: Class 'student' has no 'objects' member (no-member)
+C: 55, 2: Invalid variable name "c1" (invalid-name)
+E: 55, 7: Class 'student' has no 'objects' member (no-member)
+C: 57, 2: Invalid variable name "l" (invalid-name)
+W: 61, 2: No exception type(s) specified (bare-except)
+C: 63, 2: Invalid variable name "cl" (invalid-name)
+E: 63, 7: Class 'Classroom' has no 'objects' member (no-member)
+E: 75,12: Class 'Classroom' has no 'objects' member (no-member)
+C: 76, 5: Invalid variable name "x" (invalid-name)
+C: 77, 5: Invalid variable name "z" (invalid-name)
+R: 52, 1: Too many nested blocks (7/5) (too-many-nested-blocks)
+W:108, 8: Catching too general exception Exception (broad-except)
+C:108, 1: Invalid variable name "e" (invalid-name)
+W: 29, 2: Unused variable 't' (unused-variable)
+W:108, 1: Unused variable 'e' (unused-variable)
+W: 53, 2: Unused variable 's' (unused-variable)
+R: 20, 0: Too many branches (18/12) (too-many-branches)
+R: 20, 0: Too many statements (61/50) (too-many-statements)
+C:114, 0: Missing function docstring (missing-docstring)
+R:114, 0: Too many local variables (20/15) (too-many-locals)
+E:117, 8: Class 'Classroom' has no 'objects' member (no-member)
+E:118,10: Class 'student' has no 'objects' member (no-member)
+E:120, 9: Class 'Post' has no 'objects' member (no-member)
+C:135, 1: Invalid variable name "t" (invalid-name)
+E:135, 5: Class 'teacher' has no 'objects' member (no-member)
+C:149, 2: Invalid variable name "fileForm" (invalid-name)
+C:160, 8: Invalid variable name "f" (invalid-name)
+E:161, 5: Class 'file' has no 'objects' member (no-member)
+C:167, 2: Invalid variable name "fileForm" (invalid-name)
+C:179, 8: Invalid variable name "f" (invalid-name)
+E:180, 5: Class 'file' has no 'objects' member (no-member)
+W:189, 8: Catching too general exception Exception (broad-except)
+C:189, 1: Invalid variable name "e" (invalid-name)
+R:166, 2: Redefinition of form type from posts.forms.PostForm to posts.forms.StudentPostForm (redefined-variable-type)
+W:189, 1: Unused variable 'e' (unused-variable)
+W:114,27: Unused argument 'username' (unused-argument)
+R:114, 0: Too many branches (13/12) (too-many-branches)
+R:114, 0: Too many statements (58/50) (too-many-statements)
+C:194, 0: Missing function docstring (missing-docstring)
+E:196, 8: Class 'Post' has no 'objects' member (no-member)
+E:198, 9: Class 'file' has no 'objects' member (no-member)
+C:202, 5: Invalid variable name "p" (invalid-name)
+W:207,30: Using possibly undefined loop variable 'p' (undefined-loop-variable)
+W:214, 8: Catching too general exception Exception (broad-except)
+C:214, 1: Invalid variable name "e" (invalid-name)
+W:200, 1: Unused variable 'group' (unused-variable)
+W:214, 1: Unused variable 'e' (unused-variable)
+C:218, 0: Missing function docstring (missing-docstring)
+C:225, 2: Invalid variable name "fileForm" (invalid-name)
+C:234, 7: Invalid variable name "f" (invalid-name)
+E:235, 4: Class 'file' has no 'objects' member (no-member)
+C:240, 2: Invalid variable name "fileForm" (invalid-name)
+E:245,24: Undefined variable 'clas' (undefined-variable)
+C:250, 7: Invalid variable name "f" (invalid-name)
+E:251, 4: Class 'file' has no 'objects' member (no-member)
+R:239, 2: Redefinition of form type from posts.forms.PostForm to posts.forms.StudentPostForm (redefined-variable-type)
+C:255, 0: Missing function docstring (missing-docstring)
+E:258, 8: Class 'Classroom' has no 'objects' member (no-member)
+W:255,25: Unused argument 'username' (unused-argument)
+C:265, 0: Missing function docstring (missing-docstring)
+R:265, 0: Too many local variables (16/15) (too-many-locals)
+W:279, 8: Catching too general exception Exception (broad-except)
+E:270, 8: Class 'student' has no 'objects' member (no-member)
+C:279, 1: Invalid variable name "e" (invalid-name)
+W:289, 8: Catching too general exception Exception (broad-except)
+E:283, 8: Class 'teacher' has no 'objects' member (no-member)
+C:289, 1: Invalid variable name "e" (invalid-name)
+C:292, 2: Invalid variable name "t1" (invalid-name)
+E:292, 7: Class 'Classroom' has no 'objects' member (no-member)
+C:293, 2: Invalid variable name "l" (invalid-name)
+W:300, 2: No exception type(s) specified (bare-except)
+E:303,10: Class 'Post' has no 'objects' member (no-member)
+C:310, 2: Invalid variable name "e" (invalid-name)
+E:315, 9: Class 'Classroom' has no 'objects' member (no-member)
+E:316,10: Class 'Classroom' has no 'objects' member (no-member)
+C:322, 2: Invalid variable name "e" (invalid-name)
+C:326, 2: Invalid variable name "c1" (invalid-name)
+E:326, 7: Class 'student' has no 'objects' member (no-member)
+C:327, 2: Invalid variable name "l" (invalid-name)
+W:331, 2: No exception type(s) specified (bare-except)
+W:342, 2: No exception type(s) specified (bare-except)
+E:335,10: Class 'Post' has no 'objects' member (no-member)
+C:345, 2: Invalid variable name "cl" (invalid-name)
+E:345, 7: Class 'Classroom' has no 'objects' member (no-member)
+W:357, 8: Catching too general exception Exception (broad-except)
+C:357, 1: Invalid variable name "e" (invalid-name)
+R:265, 0: Too many branches (13/12) (too-many-branches)
+R:265, 0: Too many statements (56/50) (too-many-statements)
+C:365, 0: Missing function docstring (missing-docstring)
+R:365, 0: Too many local variables (16/15) (too-many-locals)
+C:372, 2: Invalid variable name "t1" (invalid-name)
+C:373, 2: Invalid variable name "t" (invalid-name)
+E:373, 6: Class 'teacher' has no 'objects' member (no-member)
+C:374, 2: Invalid variable name "c" (invalid-name)
+E:374, 6: Class 'Classroom' has no 'objects' member (no-member)
+C:375, 2: Invalid variable name "p" (invalid-name)
+E:375, 6: Class 'Post' has no 'objects' member (no-member)
+C:381, 2: Invalid variable name "s" (invalid-name)
+E:381, 6: Class 'student' has no 'objects' member (no-member)
+C:382, 2: Invalid variable name "c1" (invalid-name)
+E:382, 7: Class 'student' has no 'objects' member (no-member)
+C:384, 2: Invalid variable name "l" (invalid-name)
+W:388, 2: No exception type(s) specified (bare-except)
+C:391, 2: Invalid variable name "c" (invalid-name)
+E:391, 6: Class 'Classroom' has no 'objects' member (no-member)
+C:392, 2: Invalid variable name "p" (invalid-name)
+E:392, 6: Class 'Post' has no 'objects' member (no-member)
+W:401, 8: Catching too general exception Exception (broad-except)
+C:401, 1: Invalid variable name "e" (invalid-name)
+W:401, 1: Unused variable 'e' (unused-variable)
+C:408, 0: Missing function docstring (missing-docstring)
+W:438, 8: Catching too general exception Exception (broad-except)
+C:438, 1: Invalid variable name "e" (invalid-name)
+R:425, 2: Redefinition of form type from teacher.forms.TeacherProfileForm to student.forms.StudentProfileForm (redefined-variable-type)
+W:438, 1: Unused variable 'e' (unused-variable)
+W:408,25: Unused argument 'username' (unused-argument)
+W:  2, 0: Unused HttpResponse imported from django.http (unused-import)
+C:  9, 0: standard import "import uuid" comes before "from django.shortcuts import render, get_object_or_404" (wrong-import-order)
+C: 13, 0: external import "from student.models import student" comes before "from .models import Classroom, create_slug as cs" (wrong-import-order)
+C: 14, 0: external import "from teacher.models import teacher" comes before "from .models import Classroom, create_slug as cs" (wrong-import-order)
+C: 15, 0: external import "from posts.models import Post, create_slug, file" comes before "from .models import Classroom, create_slug as cs" (wrong-import-order)
+C: 16, 0: external import "from posts.forms import PostForm, StudentPostForm, FileForm" comes before "from .models import Classroom, create_slug as cs" (wrong-import-order)
+C: 17, 0: external import "from teacher.forms import TeacherProfileForm" comes before "from .models import Classroom, create_slug as cs" (wrong-import-order)
+C: 18, 0: external import "from student.forms import StudentProfileForm" comes before "from .models import Classroom, create_slug as cs" (wrong-import-order)
+C: 17, 0: Imports from package teacher are not grouped (ungrouped-imports)
+C: 18, 0: Imports from package student are not grouped (ungrouped-imports)
+
+
+Report
+======
+335 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |8      |8          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    classroom 
+      \-forms (classroom.views)
+      \-models (classroom.views)
+    django 
+      \-contrib 
+      | \-auth 
+      | | \-models (classroom.views)
+      | \-messages (classroom.views)
+      \-core 
+      | \-paginator (classroom.views)
+      \-db 
+      | \-models (classroom.views)
+      \-http (classroom.views)
+      \-shortcuts (classroom.views)
+      \-utils 
+        \-text (classroom.views)
+    posts 
+      \-forms (classroom.views)
+      \-models (classroom.views)
+    student 
+      \-forms (classroom.views)
+      \-models (classroom.views)
+    teacher 
+      \-forms (classroom.views)
+      \-models (classroom.views)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |368    |82.88 |368      |=          |
++----------+-------+------+---------+-----------+
+|docstring |8      |1.80  |8        |=          |
++----------+-------+------+---------+-----------+
+|comment   |9      |2.03  |9        |=          |
++----------+-------+------+---------+-----------+
+|empty     |59     |13.29 |59       |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |233    |233      |=          |
++-----------+-------+---------+-----------+
+|refactor   |14     |14       |=          |
++-----------+-------+---------+-----------+
+|warning    |341    |341      |=          |
++-----------+-------+---------+-----------+
+|error      |36     |36       |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------------+------------+
+|message id              |occurrences |
++========================+============+
+|mixed-indentation       |315         |
++------------------------+------------+
+|bad-whitespace          |105         |
++------------------------+------------+
+|invalid-name            |42          |
++------------------------+------------+
+|no-member               |35          |
++------------------------+------------+
+|bad-continuation        |35          |
++------------------------+------------+
+|trailing-whitespace     |28          |
++------------------------+------------+
+|missing-docstring       |9           |
++------------------------+------------+
+|unused-variable         |8           |
++------------------------+------------+
+|broad-except            |8           |
++------------------------+------------+
+|wrong-import-order      |7           |
++------------------------+------------+
+|bare-except             |5           |
++------------------------+------------+
+|too-many-locals         |4           |
++------------------------+------------+
+|line-too-long           |4           |
++------------------------+------------+
+|unused-argument         |3           |
++------------------------+------------+
+|too-many-statements     |3           |
++------------------------+------------+
+|too-many-branches       |3           |
++------------------------+------------+
+|redefined-variable-type |3           |
++------------------------+------------+
+|ungrouped-imports       |2           |
++------------------------+------------+
+|unused-import           |1           |
++------------------------+------------+
+|undefined-variable      |1           |
++------------------------+------------+
+|undefined-loop-variable |1           |
++------------------------+------------+
+|trailing-newlines       |1           |
++------------------------+------------+
+|too-many-nested-blocks  |1           |
++------------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at -12.93/10 (previous run: -12.93/10, +0.00)
+
