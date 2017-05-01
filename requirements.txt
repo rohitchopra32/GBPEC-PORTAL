@@ -51,9 +51,7 @@ python-akismet==0.3.0
 pytz==2016.7
 requests==2.13.0
 six==1.10.0
-sorl-thumbnail==12.3
 texttable==0.8.8
-unicode-slugify==0.1.4
 Unidecode==0.4.20
 Whoosh==2.7.0
 wrapt==1.10.10
